@@ -4,7 +4,8 @@ import Image from 'next/image';
 import { ShieldCheck, Zap, Clock, Star, Bot, X, Send } from 'lucide-react';
 
 export default function Home() {
-  const portalLink = "https://www.gamblor.io/"; // Enlace principal
+  const portalLink = "https://www.gamblor.io/invite?r=Gamblor_BR"; // Enlace principal
+  const termsLink = "https://www.gamblor.io/help-center?r=Gamblor_BR"
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
@@ -61,7 +62,7 @@ export default function Home() {
           <span>•</span>
           <span>Rollover de 35x no bônus</span>
           <span>•</span>
-          <a href={portalLink} target="_blank" rel="noopener noreferrer" className="underline hover:text-chart-3">
+          <a href={termsLink} target="_blank" rel="noopener noreferrer" className="underline hover:text-chart-3">
             Veja os termos completos
           </a>
         </div>
@@ -183,7 +184,7 @@ export default function Home() {
           <a href={portalLink} target="_blank" rel="noopener noreferrer" className="group transform transition-transform hover:scale-105">
             <div className="relative w-full aspect-square rounded-lg overflow-hidden">
               <Image
-                src="/img/juego3.png"
+                src="/img/libertadores.png"
                 alt="Apostas em Futebol ao Vivo"
                 fill
                 className="object-cover"
@@ -267,7 +268,7 @@ export default function Home() {
               </p>
               <p>
                 Regras adicionais e elegibilidade se aplicam - 
-                <a href={portalLink} target="_blank" rel="noopener noreferrer" className="underline hover:text-chart-3">
+                <a href={termsLink} target="_blank" rel="noopener noreferrer" className="underline hover:text-chart-3">
                   Termos Completos
                 </a>.
               </p>
