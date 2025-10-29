@@ -4,25 +4,14 @@ import Image from 'next/image';
 import { ShieldCheck, Zap, Clock, Star, Bot, X, Send } from 'lucide-react';
 
 export default function Home() {
-  const portalLink = "https://www.gamblor.io/invite?r=Gamblor_BR"; // Enlace principal
-  const termsLink = "https://www.gamblor.io/help-center?r=Gamblor_BR"
+  const portalLink = "https://www.gamblor.io/"; // Enlace principal
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
 
       {/* ===== 1. Hero Section (Banner de Imagen Clicable) ===== */}
       <section 
-        className="
-          w-full text-center flex flex-col items-center justify-center px-4 
-          bg-no-repeat bg-center relative cursor-pointer 
-          bg-hero-sm md:bg-hero-md lg:bg-hero-lg xl:bg-hero-xl 
-          
-          bg-cover
-          aspect-[639/498] 
-          md:aspect-[872/450] 
-          lg:aspect-[1320/429] 
-          xl:aspect-[1966/554]
-        "
+        className="w-full text-center flex flex-col items-center justify-center px-4 bg-no-repeat bg-center relative cursor-pointer bg-hero-sm md:bg-hero-md lg:bg-hero-lg xl:bg-hero-xl bg-cover aspect-[639/498] md:aspect-[872/450] lg:aspect-[1320/429] xl:aspect-[1966/554]"
         onClick={() => window.open(portalLink, "_blank")}
       >
         {/* Vacío: la imagen de fondo lo es todo */}
@@ -31,17 +20,17 @@ export default function Home() {
       {/* ===== 2. Hero Content (Texto do PDF em Português) ===== */}
       <section className="w-full text-center flex flex-col items-center py-16 px-4">
         
-        {/* H1 do PDF */}
+        {/* H1 (Ahora usará la fuente 'Manrope' automáticamente) */}
         <h1 className="text-4xl md:text-6xl font-bold max-w-3xl">
           Bônus de Depósito PIX de 150% - Até <span className="text-chart-3">R$15.000</span>
         </h1>
         
-        {/* Subhead do PDF */}
+        {/* P (Ahora usará la fuente 'Inter' automáticamente) */}
         <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-2xl">
           Deposite com PIX e jogue Crash, Slots e apostas ao vivo em futebol em minutos.
         </p>
         
-        {/* Primary CTA do PDF */}
+        {/* ===== CAMBIO EN EL BOTÓN AQUÍ ===== */}
         <a 
           href={portalLink}
           target="_blank"
@@ -49,8 +38,15 @@ export default function Home() {
           className="
             mt-8 px-10 py-4 text-lg font-bold rounded-lg 
             transform transition-all duration-300 
-            bg-card text-foreground border border-chart-3 
-            hover:bg-chart-3 hover:text-primary-foreground
+            
+            /* Aplicamos el nuevo gradiente dorado */
+            bg-gradient-to-r from-gradient-start via-gradient-middle to-gradient-end 
+            
+            /* Texto oscuro (tomado del 'end' del gradiente) */
+            text-primary-foreground 
+            
+            /* Efecto hover sutil */
+            hover:brightness-110
           "
         >
           Depositar com PIX
@@ -62,7 +58,7 @@ export default function Home() {
           <span>•</span>
           <span>Rollover de 35x no bônus</span>
           <span>•</span>
-          <a href={termsLink} target="_blank" rel="noopener noreferrer" className="underline hover:text-chart-3">
+          <a href={portalLink} target="_blank" rel="noopener noreferrer" className="underline hover:text-chart-3">
             Veja os termos completos
           </a>
         </div>
@@ -90,7 +86,7 @@ export default function Home() {
       <section className="w-full py-16 mt-8">
         <div className="max-w-6xl mx-auto px-4 text-center">
           
-          {/* Título com ícone */}
+          {/* Título com ícone (Ahora usará 'Manrope') */}
           <div className="flex items-center justify-center space-x-3 mb-12">
             <Image
               src="/img/logo_icon.png"
@@ -137,7 +133,7 @@ export default function Home() {
       {/* ===== 5. What to play Section ===== */}
       <section className="w-full max-w-5xl mx-auto py-16 px-4 text-center">
 
-        {/* Título com ícone */}
+        {/* Título com ícone (Ahora usará 'Manrope') */}
         <div className="flex items-center justify-center space-x-3 mb-12">
           <Image
             src="/img/logo_icon.png"
@@ -155,14 +151,14 @@ export default function Home() {
             <div className="relative w-full aspect-square rounded-lg overflow-hidden">
               <Image
                 src="/img/juego1.png"
-                alt="Jogo Crash - Spaceman"
+                alt="Jogo Crash - Pig-A-Boom"
                 fill
                 className="object-cover"
               />
             </div>
             <div className="mt-4 text-center">
               <h3 className="text-2xl font-bold transition-colors group-hover:text-chart-3">Crash</h3>
-              <p className="text-muted-foreground">Spaceman</p>
+              <p className="text-muted-foreground">Pig-A-Boom</p>
             </div>
           </a>
 
@@ -204,7 +200,7 @@ export default function Home() {
       <section className="w-full py-16">
         <div className="max-w-6xl mx-auto px-4 text-center">
 
-          {/* Título com ícone */}
+          {/* Título com ícone (Ahora usará 'Manrope') */}
           <div className="flex items-center justify-center space-x-3 mb-12">
             <Image
               src="/img/logo_icon.png"
@@ -268,7 +264,7 @@ export default function Home() {
               </p>
               <p>
                 Regras adicionais e elegibilidade se aplicam - 
-                <a href={termsLink} target="_blank" rel="noopener noreferrer" className="underline hover:text-chart-3">
+                <a href={portalLink} target="_blank" rel="noopener noreferrer" className="underline hover:text-chart-3">
                   Termos Completos
                 </a>.
               </p>
