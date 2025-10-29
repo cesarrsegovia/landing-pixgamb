@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { ShieldCheck, Zap, Clock, Star, Bot, X, Send } from 'lucide-react';
 
 export default function Home() {
-  const portalLink = "https://www.gamblor.io/invite?r=Gamblor_BR"; 
+  const portalLink = "https://www.gamblor.io/invite?r=Gamblor_BR";
   const termsLink = "https://www.gamblor.io/help-center?r=Gamblor_BR"
 
   return (
@@ -25,7 +25,7 @@ export default function Home() {
         </h1>
 
         <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-2xl">
-          Deposite com PIX e jogue Crash, Slots e apostas ao vivo em futebol, em minutos.
+          Depósito mín. R$20 · Rollover de 40× no bônus · É necessário optar no depósito.
         </p>
 
         <a
@@ -38,8 +38,10 @@ export default function Home() {
             rounded-xl 
             transform transition-all duration-200
             bg-card text-brand
-            border-t border-l border-r  
-            bg-bg border-x border-brand/70 shadow-xs shadow-muted/10 hover:bg-brand/20 active:scale-95
+            border-t border-l border-r  border-x-[var(--color-g200)]
+            shadow-[0px_1.42857px_0px_#000000]
+            bg-bg border-x border-brand/70  hover:bg-brand/20 active:scale-95
+            
           "
         >
           Depositar com PIX
@@ -159,7 +161,7 @@ export default function Home() {
             <div className="relative w-full aspect-square rounded-lg overflow-hidden">
               <Image
                 src="/img/juego2.png"
-                alt="Jogos de Slot"
+                alt="Slots — Sweet Bonanza, Gates of Olympus, Sugar Rush"
                 fill
                 className="object-cover"
               />
@@ -174,7 +176,7 @@ export default function Home() {
             <div className="relative w-full aspect-square rounded-lg overflow-hidden">
               <Image
                 src="/img/libertadores.png"
-                alt="Apostas em Futebol ao Vivo"
+                alt="Apostas ao vivo — Brasileirão, Libertadores e Europa"
                 fill
                 className="object-cover"
               />
@@ -227,28 +229,28 @@ export default function Home() {
             </div>
           </div>
 
-          <p className="text-base text-muted-foreground mb-6"> 
+          <p className="text-base text-muted-foreground mb-6">
             Prefere cripto? Aceitamos SOL, ETH, USDT.
           </p>
 
           {/* Logos Crypto */}
           <div className="flex justify-center items-center gap-6">
             <Image
-              src="/img/solana.png" 
+              src="/img/solana.png"
               alt="Solana Logo"
               width={60}
               height={60}
               className="object-contain"
             />
             <Image
-              src="/img/eth.png" 
+              src="/img/eth.png"
               alt="Ethereum Logo"
               width={60}
               height={60}
               className="object-contain"
             />
             <Image
-              src="/img/usdt.png" 
+              src="/img/usdt.png"
               alt="USDT Logo"
               width={60}
               height={60}
@@ -260,7 +262,7 @@ export default function Home() {
 
       {/* ===== 7. FAQ Section ===== */}
       <section className="w-full py-16">
-        <div className="max-w-4xl mx-auto px-4 text-center"> 
+        <div className="max-w-4xl mx-auto px-4 text-center">
 
           {/* Título con ícone */}
           <div className="flex items-center justify-center space-x-3 mb-12">
@@ -275,7 +277,7 @@ export default function Home() {
           </div>
 
           {/* Contenido del FAQ */}
-          <div className="space-y-6"> 
+          <div className="space-y-6">
             <div>
               <h3 className="text-lg font-semibold text-brand mb-1">Preciso de código?</h3>
               <p className="text-muted-foreground">Não. Basta optar no depósito para ativar o bônus de 250%.</p>
