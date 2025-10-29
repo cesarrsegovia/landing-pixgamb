@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google"; // Solo importamos Inter
+import { Inter } from "next/font/google"; 
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] }); // Configuramos Inter
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Gamblor Landing Page",
@@ -15,7 +15,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    // Volvemos a la forma simple de aplicar la fuente
     <html lang="pt" className="dark">
       <body className={inter.className}>{children}</body>
     </html>

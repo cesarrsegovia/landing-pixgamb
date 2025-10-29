@@ -4,34 +4,30 @@ import Image from 'next/image';
 import { ShieldCheck, Zap, Clock, Star, Bot, X, Send } from 'lucide-react';
 
 export default function Home() {
-  const portalLink = "https://www.gamblor.io/invite?r=Gamblor_BR"; // Enlace principal
+  const portalLink = "https://www.gamblor.io/invite?r=Gamblor_BR"; 
   const termsLink = "https://www.gamblor.io/help-center?r=Gamblor_BR"
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
 
-      {/* ===== 1. Hero Section (Banner de Imagen Clicable) ===== */}
+      {/* ===== 1. Hero Section ===== */}
       <section
         className="w-full text-center flex flex-col items-center justify-center px-4 bg-no-repeat bg-center relative cursor-pointer bg-hero-sm md:bg-hero-md lg:bg-hero-lg xl:bg-hero-xl bg-cover aspect-[639/498] md:aspect-[872/450] lg:aspect-[1320/429] xl:aspect-[1966/554]"
         onClick={() => window.open(portalLink, "_blank")}
       >
-        {/* Vacío: la imagen de fondo lo es todo */}
       </section>
 
-      {/* ===== 2. Hero Content (Texto do PDF em Português) ===== */}
+      {/* ===== 2. Hero Content  ===== */}
       <section className="w-full text-center flex flex-col items-center py-16 px-4">
 
-        {/* H1 do PDF */}
         <h1 className="text-4xl md:text-6xl font-bold max-w-3xl">
           Bônus de Depósito PIX de 250% <span className="text-brand">Até R$25.000</span>
         </h1>
 
-        {/* Subhead do PDF */}
         <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-2xl">
           Deposite com PIX e jogue Crash, Slots e apostas ao vivo em futebol, em minutos.
         </p>
 
-        {/* ===== CAMBIO EN EL BOTÓN AQUÍ ===== */}
         <a
           href={portalLink}
           target="_blank"
@@ -40,13 +36,10 @@ export default function Home() {
             mt-8 px-10 py-3
             text-lg font-bold
             rounded-xl 
-            transform transition-all duration-200 /* Transición general */
-
+            transform transition-all duration-200
             bg-card text-brand
-            border-t border-l border-r border-brand /* Borde sin T/L/R */
-            shadow-[var(--shadow-glow)] /* Resplandor */
-
-            bg-bg border-t border-x border-brand/70 shadow-xs shadow-muted/10 text-white hover:bg-brand/20 active:scale-95 duration-200
+            border-t border-l border-r  
+            bg-bg border-x border-brand/70 shadow-xs shadow-muted/10 hover:bg-brand/20 active:scale-95
           "
         >
           Depositar com PIX
@@ -64,7 +57,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== 3. Trust Row Section (do PDF) ===== */}
+      {/* ===== 3. Trust Row Section  ===== */}
       <section className="w-full max-w-5xl mx-auto pb-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center px-4">
           <div className="flex items-center justify-center space-x-3">
@@ -86,7 +79,6 @@ export default function Home() {
       <section className="w-full py-16 mt-8">
         <div className="max-w-6xl mx-auto px-4 text-center">
 
-          {/* Título com ícone (Ahora usará 'Manrope') */}
           <div className="flex items-center justify-center space-x-3 mb-12">
             <Image
               src="/img/logo_icon.png"
@@ -135,7 +127,6 @@ export default function Home() {
       {/* ===== 5. What to play Section ===== */}
       <section className="w-full max-w-5xl mx-auto py-16 px-4 text-center">
 
-        {/* Título com ícone (Ahora usará 'Manrope') */}
         <div className="flex items-center justify-center space-x-3 mb-12">
           <Image
             src="/img/logo_icon.png"
@@ -198,11 +189,10 @@ export default function Home() {
       </section>
 
 
-      {/* ===== 6. Why Gamblor Section (¡ACTUALIZADA!) ===== */}
+      {/* ===== 6. Why Gamblor Section  ===== */}
       <section className="w-full py-16">
         <div className="max-w-6xl mx-auto px-4 text-center">
 
-          {/* Título com ícone */}
           <div className="flex items-center justify-center space-x-3 mb-12">
             <Image
               src="/img/logo_icon.png"
@@ -214,8 +204,7 @@ export default function Home() {
             <h2 className="text-3xl font-bold">Por que a Gamblor</h2>
           </div>
 
-          {/* Grid de beneficios */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 text-sm mb-16"> {/* Añadido mb-16 para separar del texto de crypto */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 text-sm mb-16">
             <div className="flex flex-col items-center space-y-2">
               <Star className="text-chart-3" />
               <span>PIX nativo</span>
