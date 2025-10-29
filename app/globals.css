@@ -50,6 +50,8 @@
   --border: oklch(0.269 0 0);
   --input: oklch(0.269 0 0);
   --ring: oklch(0.439 0 0);
+  --brand: #f0c24b;
+  --shadow-glow: 0 0 24px rgba(240,194,75,0.35);
 }
 
 /* --- Mapeo de variables a clases de Tailwind --- */
@@ -69,6 +71,7 @@
   --color-gradient-start: #FEF8BE;
   --color-gradient-middle: #FAE17D;
   --color-gradient-end: #5E3413;
+  --color-brand: var(--brand);
 
   /* --- IMÁGENES --- */
   --background-image-hero-sm: url('/img/639x498.png');
@@ -115,6 +118,7 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --shadow-glow: 0 0 24px theme('colors.brand / 35%');
 }
 
 /* --- Estilos base --- */
