@@ -51,12 +51,11 @@
   --input: oklch(0.269 0 0);
   --ring: oklch(0.439 0 0);
   --brand: #f0c24b;
-  --shadow-glow: 0 0 24px rgba(240,194,75,0.35);
+  --shadow-glow: 0 0 24px rgba(240, 194, 75, 0.35);
 }
 
 /* --- Mapeo de variables a clases de Tailwind --- */
 @theme inline {
-  
   /* --- Paleta de Oro --- */
   --color-g50: #f1f5e7;
   --color-g75: #f4d69c;
@@ -65,18 +64,18 @@
   --color-g300: #e49b0d;
   --color-g400: #a06d09;
   --color-g500: #8b5f08;
-  
+
   /* --- Gradiente de Oro --- */
-  --color-gradient-start: #FEF8BE;
-  --color-gradient-middle: #FAE17D;
-  --color-gradient-end: #5E3413;
+  --color-gradient-start: #fef8be;
+  --color-gradient-middle: #fae17d;
+  --color-gradient-end: #5e3413;
   --color-brand: var(--brand);
 
   /* --- IMÁGENES --- */
-  --background-image-hero-sm: url('/img/639x498.png');
-  --background-image-hero-md: url('/img/872x450.png');
-  --background-image-hero-lg: url('/img/1320x429.png');
-  --background-image-hero-xl: url('/img/1966x554.png');
+  --background-image-hero-sm: url("/img/639x498.png");
+  --background-image-hero-md: url("/img/872x450.png");
+  --background-image-hero-lg: url("/img/1320x429.png");
+  --background-image-hero-xl: url("/img/1966x554.png");
 
   /* --- Re-mapeo de Colores --- */
   --color-background: var(--background);
@@ -86,11 +85,11 @@
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
-  --color-primary-foreground: var(--color-gradient-end); 
+  --color-primary-foreground: var(--color-gradient-end);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-muted: var(--muted);
-  --color-muted-foreground: var(--color-g100); 
+  --color-muted-foreground: var(--color-g100);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
   --color-destructive: var(--destructive);
@@ -117,7 +116,7 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-  --shadow-glow: 0 0 24px theme('colors.brand / 35%');
+  --shadow-glow: 0 0 24px theme("colors.brand / 35%");
 }
 
 /* --- Estilos base --- */
@@ -133,7 +132,10 @@
 
 @layer base {
   :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
-    h1, h2, h3, h4 {
+    h1,
+    h2,
+    h3,
+    h4 {
     }
     h1 {
       font-size: var(--text-2xl);
@@ -180,4 +182,59 @@
 
 html {
   font-size: var(--font-size);
+}
+
+.deposit-button {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 36px;
+  margin-top: 12px;
+  border-radius: 14px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+
+  /* Gold gradient border that fades at bottom */
+  background: linear-gradient(
+    180deg,
+    #fceec4 0%,
+    #e5a930 70%,
+    transparent 100%
+  );
+  box-shadow: 0px 2px 0px #000000;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+/* Dark inner background */
+.deposit-button::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: 13px;
+  background: #0b0b0b;
+  z-index: 0;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.08),
+    inset 0px -2px 4px rgba(0, 0, 0, 0.6);
+  transition: background-color 0.3s ease;
+}
+
+/* Text gradient */
+.deposit-button span {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(90deg, #fff1ce, #e7b14a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hover — uniform soft golden tint */
+.deposit-button:hover::before {
+  background: #1a1508; /* slightly lighter warm tone than #0b0b0b */
 }

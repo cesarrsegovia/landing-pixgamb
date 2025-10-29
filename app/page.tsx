@@ -1,50 +1,42 @@
 "use client";
 
-import Image from 'next/image';
-import { ShieldCheck, Zap, Clock, Star, Bot, X, Send } from 'lucide-react';
+import Image from "next/image";
+import { ShieldCheck, Zap, Clock, Star, Bot, X, Send } from "lucide-react";
 
 export default function Home() {
   const portalLink = "https://www.gamblor.io/invite?r=Gamblor_BR";
-  const termsLink = "https://www.gamblor.io/help-center?r=Gamblor_BR"
+  const termsLink = "https://www.gamblor.io/help-center?r=Gamblor_BR";
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-
       {/* ===== 1. Hero Section ===== */}
       <section
         className="w-full text-center flex flex-col items-center justify-center px-4 bg-no-repeat bg-center relative cursor-pointer bg-hero-sm md:bg-hero-md lg:bg-hero-lg xl:bg-hero-xl bg-cover aspect-[639/498] md:aspect-[872/450] lg:aspect-[1320/429] xl:aspect-[1966/554]"
         onClick={() => window.open(portalLink, "_blank")}
-      >
-      </section>
+      ></section>
 
       {/* ===== 2. Hero Content  ===== */}
       <section className="w-full text-center flex flex-col items-center py-16 px-4">
-
         <h1 className="text-4xl md:text-6xl font-bold max-w-3xl">
-          Bônus de Depósito PIX de 250% <span className="text-brand">Até R$25.000</span>
+          Bônus de Depósito PIX de 250%{" "}
+          <span className="text-brand">Até R$25.000</span>
         </h1>
 
         <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-2xl">
-          Depósito mín. R$20 · Rollover de 40× no bônus · É necessário optar no depósito.
+          Depósito mín. R$20 · Rollover de 40× no bônus · É necessário optar no
+          depósito.
         </p>
 
         <a
           href={portalLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="
-            mt-8 px-10 py-3
-            text-lg font-bold
-            rounded-xl 
-            transform transition-all duration-200
+          className="deposit-button  transform transition-all duration-200
             bg-card text-brand
-            border-t border-l border-r  border-x-[var(--color-g200)]
-            shadow-[0px_1.42857px_0px_#000000]
-            bg-bg border-x border-brand/70  hover:bg-brand/20 active:scale-95
-            
-          "
+  bg-bg 
+hover:bg-brand/20 active:scale-95"
         >
-          Depositar com PIX
+          <span>Depositar com PIX</span>
         </a>
 
         {/* Micro-terms do PDF */}
@@ -53,7 +45,12 @@ export default function Home() {
           <span>•</span>
           <span>Rollover de 40x no bônus</span>
           <span>•</span>
-          <a href={termsLink} target="_blank" rel="noopener noreferrer" className="underline hover:text-brand">
+          <a
+            href={termsLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-brand"
+          >
             Veja os termos completos
           </a>
         </div>
@@ -80,7 +77,6 @@ export default function Home() {
       {/* ===== 4. How it works Section ===== */}
       <section className="w-full py-16 mt-8">
         <div className="max-w-6xl mx-auto px-4 text-center">
-
           <div className="flex items-center justify-center space-x-3 mb-12">
             <Image
               src="/img/logo_icon.png"
@@ -93,16 +89,20 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-
             <div className="flex flex-col items-center p-6 bg-card rounded-lg border border-border transition-all duration-300 hover:border-chart-3 hover:shadow-[inset_0_0_15px_0_var(--color-chart-3)]">
-              <div className="flex items-center justify-center w-16 h-16 
+              <div
+                className="flex items-center justify-center w-16 h-16 
                 bg-chart-3 text-primary-foreground 
                 text-2xl font-bold rounded-full mb-4"
               >
                 1
               </div>
-              <h3 className="text-xl font-semibold mb-2">Escolha PIX no Depósito</h3>
-              <p className="text-muted-foreground">Selecione PIX como seu método de pagamento.</p>
+              <h3 className="text-xl font-semibold mb-2">
+                Escolha PIX no Depósito
+              </h3>
+              <p className="text-muted-foreground">
+                Selecione PIX como seu método de pagamento.
+              </p>
             </div>
 
             <div className="flex flex-col items-center p-6 bg-card rounded-lg border border-border transition-all duration-300 hover:border-chart-3 hover:shadow-[inset_0_0_15px_0_var(--color-chart-3)]">
@@ -110,16 +110,21 @@ export default function Home() {
                 2
               </div>
               <h3 className="text-xl font-semibold mb-2">Deposite R$20+</h3>
-              <p className="text-muted-foreground">Confirmação instantânea em BRL a partir de R$20.</p>
+              <p className="text-muted-foreground">
+                Confirmação instantânea em BRL a partir de R$20.
+              </p>
             </div>
 
             <div className="flex flex-col items-center p-6 bg-card rounded-lg border border-border transition-all duration-300 hover:border-chart-3 hover:shadow-[inset_0_0_15px_0_var(--color-chart-3)]">
               <div className="flex items-center justify-center w-16 h-16 bg-chart-3 text-primary-foreground text-2xl font-bold rounded-full mb-4">
                 3
               </div>
-              <h3 className="text-xl font-semibold mb-2">Ative o bônus no depósito
+              <h3 className="text-xl font-semibold mb-2">
+                Ative o bônus no depósito
               </h3>
-              <p className="text-muted-foreground">No primeiro depósito via PIX, selecione “Ativar bônus 250%” para aplicar a oferta.
+              <p className="text-muted-foreground">
+                No primeiro depósito via PIX, selecione “Ativar bônus 250%” para
+                aplicar a oferta.
               </p>
             </div>
           </div>
@@ -128,7 +133,6 @@ export default function Home() {
 
       {/* ===== 5. What to play Section ===== */}
       <section className="w-full max-w-5xl mx-auto py-16 px-4 text-center">
-
         <div className="flex items-center justify-center space-x-3 mb-12">
           <Image
             src="/img/logo_icon.png"
@@ -141,8 +145,12 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-          <a href={portalLink} target="_blank" rel="noopener noreferrer" className="group transform transition-transform hover:scale-105">
+          <a
+            href={portalLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group transform transition-transform hover:scale-105"
+          >
             <div className="relative w-full aspect-square rounded-lg overflow-hidden">
               <Image
                 src="/img/juego1.png"
@@ -152,12 +160,19 @@ export default function Home() {
               />
             </div>
             <div className="mt-4 text-center">
-              <h3 className="text-2xl font-bold transition-colors group-hover:text-chart-3">Crash</h3>
+              <h3 className="text-2xl font-bold transition-colors group-hover:text-chart-3">
+                Crash
+              </h3>
               <p className="text-muted-foreground">Pig-A-Boom</p>
             </div>
           </a>
 
-          <a href={portalLink} target="_blank" rel="noopener noreferrer" className="group transform transition-transform hover:scale-105">
+          <a
+            href={portalLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group transform transition-transform hover:scale-105"
+          >
             <div className="relative w-full aspect-square rounded-lg overflow-hidden">
               <Image
                 src="/img/juego2.png"
@@ -167,12 +182,21 @@ export default function Home() {
               />
             </div>
             <div className="mt-4 text-center">
-              <h3 className="text-2xl font-bold transition-colors group-hover:text-chart-3">Slots</h3>
-              <p className="text-muted-foreground">Sweet Bonanza, Gates of Olympus & Sugar Rush</p>
+              <h3 className="text-2xl font-bold transition-colors group-hover:text-chart-3">
+                Slots
+              </h3>
+              <p className="text-muted-foreground">
+                Sweet Bonanza, Gates of Olympus & Sugar Rush
+              </p>
             </div>
           </a>
 
-          <a href={portalLink} target="_blank" rel="noopener noreferrer" className="group transform transition-transform hover:scale-105">
+          <a
+            href={portalLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group transform transition-transform hover:scale-105"
+          >
             <div className="relative w-full aspect-square rounded-lg overflow-hidden">
               <Image
                 src="/img/libertadores.png"
@@ -182,19 +206,20 @@ export default function Home() {
               />
             </div>
             <div className="mt-4 text-center">
-              <h3 className="text-2xl font-bold transition-colors group-hover:text-chart-3">Futebol ao Vivo</h3>
-              <p className="text-muted-foreground">Aposte no Brasileirão, Libertadores e Europa ao vivo</p>
+              <h3 className="text-2xl font-bold transition-colors group-hover:text-chart-3">
+                Futebol ao Vivo
+              </h3>
+              <p className="text-muted-foreground">
+                Aposte no Brasileirão, Libertadores e Europa ao vivo
+              </p>
             </div>
           </a>
-
         </div>
       </section>
-
 
       {/* ===== 6. Why Gamblor Section  ===== */}
       <section className="w-full py-16">
         <div className="max-w-6xl mx-auto px-4 text-center">
-
           <div className="flex items-center justify-center space-x-3 mb-12">
             <Image
               src="/img/logo_icon.png"
@@ -263,7 +288,6 @@ export default function Home() {
       {/* ===== 7. FAQ Section ===== */}
       <section className="w-full py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
-
           {/* Título con ícone */}
           <div className="flex items-center justify-center space-x-3 mb-12">
             <Image
@@ -279,12 +303,20 @@ export default function Home() {
           {/* Contenido del FAQ */}
           <div className="space-y-6">
             <div>
-              <h3 className="text-lg font-semibold text-brand mb-1">Preciso de código?</h3>
-              <p className="text-muted-foreground">Não. Basta optar no depósito para ativar o bônus de 250%.</p>
+              <h3 className="text-lg font-semibold text-brand mb-1">
+                Preciso de código?
+              </h3>
+              <p className="text-muted-foreground">
+                Não. Basta optar no depósito para ativar o bônus de 250%.
+              </p>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-brand mb-1">Qual o mínimo?</h3>
-              <p className="text-muted-foreground">R$20 por PIX; aposta mínima R$0,50.</p>
+              <h3 className="text-lg font-semibold text-brand mb-1">
+                Qual o mínimo?
+              </h3>
+              <p className="text-muted-foreground">
+                R$20 por PIX; aposta mínima R$0,50.
+              </p>
             </div>
           </div>
         </div>
@@ -292,11 +324,14 @@ export default function Home() {
 
       {/* ===== 7. Footer Section ===== */}
       <footer className="w-full mt-16 border-t border-border">
-
         <div className="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between">
-
           <div className="flex-shrink-0">
-            <a href="https://www.gamblor.io/invite?r=Gamblor_BR" target="_blank" rel="noopener noreferrer" aria-label="Gamblor Casino">
+            <a
+              href="https://www.gamblor.io/invite?r=Gamblor_BR"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Gamblor Casino"
+            >
               <Image
                 src="/img/logogamblor.png"
                 alt="Logo Gamblor"
@@ -308,35 +343,53 @@ export default function Home() {
           </div>
 
           <div className="my-4 md:my-0 text-center">
-            <p className="text-sm text-muted-foreground">© 2025 Gamblor. Todos os direitos reservados.</p>
+            <p className="text-sm text-muted-foreground">
+              © 2025 Gamblor. Todos os direitos reservados.
+            </p>
 
             <div className="max-w-4xl mx-auto px-4 text-xs text-muted-foreground mt-4">
               <p className="mb-2">
-                18+ Jogue com responsabilidade. Bônus apenas no primeiro depósito via PIX. Rollover de 40× no bônus. Depósito mín. R$20.
+                18+ Jogue com responsabilidade. Bônus apenas no primeiro
+                depósito via PIX. Rollover de 40× no bônus. Depósito mín. R$20.
               </p>
               <p>
                 Regras adicionais e elegibilidade se aplicam -
-                <a href={termsLink} target="_blank" rel="noopener noreferrer" className="underline hover:text-chart-3">
+                <a
+                  href={termsLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-chart-3"
+                >
                   Termos Completos
-                </a>.
+                </a>
+                .
               </p>
             </div>
           </div>
 
           <div className="flex items-center space-x-5">
-            <a href="https://discord.gg/gamblorcasino" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+            <a
+              href="https://discord.gg/gamblorcasino"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Discord"
+            >
               <Bot className="w-5 h-5 text-muted-foreground transition-colors hover:text-foreground" />
             </a>
-            <a href="https://x.com/gamblorcasino" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+            <a
+              href="https://x.com/gamblorcasino"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X (Twitter)"
+            >
               <X className="w-5 h-5 text-muted-foreground transition-colors hover:text-foreground" />
             </a>
-            <a href="https://t.me/gamblorcasino" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+            {/* <a href="https://t.me/gamblorcasino" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
               <Send className="w-5 h-5 text-muted-foreground transition-colors hover:text-foreground" />
-            </a>
+            </a> */}
           </div>
         </div>
       </footer>
-
     </main>
-  )
+  );
 }
