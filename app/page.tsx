@@ -11,7 +11,17 @@ export default function Home() {
 
       {/* ===== 1. Hero Section (Banner de Imagen Clicable) ===== */}
       <section 
-        className="w-full text-center flex flex-col items-center justify-center px-4 bg-no-repeat bg-cover bg-center relative cursor-pointer bg-hero-sm md:bg-hero-md lg:bg-hero-lg xl:bg-hero-xl h-[400px] md:h-[450px] lg:h-[429px] xl:h-[554px]"
+        className="
+          w-full text-center flex flex-col items-center justify-center px-4 
+          bg-no-repeat bg-center relative cursor-pointer 
+          bg-hero-sm md:bg-hero-md lg:bg-hero-lg xl:bg-hero-xl 
+          
+          bg-cover
+          aspect-[639/498] 
+          md:aspect-[872/450] 
+          lg:aspect-[1320/429] 
+          xl:aspect-[1966/554]
+        "
         onClick={() => window.open(portalLink, "_blank")}
       >
         {/* Vacío: la imagen de fondo lo es todo */}
@@ -22,7 +32,7 @@ export default function Home() {
         
         {/* H1 do PDF */}
         <h1 className="text-4xl md:text-6xl font-bold max-w-3xl">
-          Bônus de Depósito PIX de 150% - Até <span className="text-chart-3">R$1.000</span>
+          Bônus de Depósito PIX de 150% - Até <span className="text-chart-3">R$15.000</span>
         </h1>
         
         {/* Subhead do PDF */}
@@ -30,7 +40,7 @@ export default function Home() {
           Deposite com PIX e jogue Crash, Slots e apostas ao vivo em futebol em minutos.
         </p>
         
-        {/* ===== CAMBIO EN EL BOTÓN AQUÍ ===== */}
+        {/* Primary CTA do PDF */}
         <a 
           href={portalLink}
           target="_blank"
