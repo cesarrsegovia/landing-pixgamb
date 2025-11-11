@@ -5,9 +5,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Gamblor – 250% Bônus no Primeiro Depósito via PIX",
+  title: "Cassino em português com PIX | Bônus 250% até R$ 25.000 | Gamblor",
   description:
-    "Ganhe 250% de bônus no seu primeiro depósito via PIX! Oferta disponível para novos e atuais jogadores.",
+    "Jogue em português, deposite com PIX e saque em cripto. Bônus de 250% no primeiro depósito, até R$ 25.000. Suporte em português.",
   keywords: [
     "cassino online",
     "bônus de depósito",

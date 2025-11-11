@@ -1,7 +1,18 @@
 "use client";
 
 import Image from "next/image";
-import { ShieldCheck, Zap, Clock, Star, Bot, X, Send } from "lucide-react";
+import {
+  ShieldCheck,
+  Clock,
+  Star,
+  Bot,
+  X,
+  Send,
+  CreditCard,
+  MessageCircle,
+  Wallet,
+  Lock,
+} from "lucide-react";
 
 export default function Home() {
   const portalLink = "https://www.gamblor.io/invite?r=Gamblor_BR";
@@ -9,13 +20,14 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-      <section className="w-full bg-brand py-2 text-center text-sm font-medium text-primary-foreground flex items-center justify-center gap-2">
-        {/* CAMBIO: Reemplazado emoji por <Image> */}
+      
+      {/* ===== Micro-banner ===== */}
+      <section className="w-full bg-brand py-2 text-center text-sm font-medium text-primary-foreground flex items-center justify-center gap-2 px-4">
         <Image
-          src="/img/flag_br.png" // Asegúrate de que este sea el nombre de tu imagen
+          src="/img/flag_br.png"
           alt="Bandeira do Brasil"
-          width={20} // Ancho de 20px
-          height={14} // Alto de 14px
+          width={20}
+          height={14}
           className="object-contain"
         />
         <span>
@@ -23,75 +35,102 @@ export default function Home() {
           você já pode jogar hoje.
         </span>
       </section>
-      {/* ===== 1. Hero Section ===== */}
+
+      {/* ===== Hero Section ===== */}
       <section
         className="w-full text-center flex flex-col items-center justify-center px-4 bg-no-repeat bg-center relative cursor-pointer bg-hero-sm md:bg-hero-md lg:bg-hero-lg xl:bg-hero-xl bg-cover aspect-[639/498] md:aspect-[872/450] lg:aspect-[1320/429] xl:aspect-[1966/554]"
         onClick={() => window.open(portalLink, "_blank")}
       ></section>
 
-      {/* ===== 2. Hero Content  ===== */}
-      <section className="w-full text-center flex flex-col items-center py-16 px-4">
+      {/* ===== Hero Content ===== */}
+      <section className="w-full text-center flex flex-col items-center pt-16 pb-12 px-4">
+        
         <h1 className="text-4xl md:text-6xl font-bold max-w-3xl">
-          Bônus de Depósito PIX de 250%{" "}
-          <span className="text-brand">Até R$25.000</span>
+          Jogue em português. Deposite com PIX. Saque em cripto.
         </h1>
-
         <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-2xl">
-          Depósito mín. R$20 · Rollover de 40× no bônus · É necessário optar no
-          depósito.
+          Bônus de 250% no primeiro depósito, até R$ 25.000. Pagamentos rápidos e
+          suporte em português.
         </p>
 
-        <a
-          href={portalLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="deposit-button  transform transition-all duration-200
-            bg-card text-brand
-  bg-bg 
-hover:bg-brand/20 active:scale-95"
-        >
-          <span>Depositar com PIX</span>
-        </a>
-
-        {/* Micro-terms do PDF */}
-        <div className="mt-6 text-sm text-muted-foreground space-x-4">
-          <span>Depósito mín. R$20</span>
-          <span>•</span>
-          <span>Rollover de 40x no bônus</span>
-          <span>•</span>
+        <div className="mt-8 flex flex-col md:flex-row items-center gap-4">
           <a
-            href={termsLink}
+            href={portalLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="underline hover:text-brand"
+            className="deposit-button transform transition-all duration-200 active:scale-95"
           >
-            Veja os termos completos
+            <span>Jogar agora</span>
+          </a>
+          <a
+            href={portalLink} 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="deposit-button transform transition-all duration-200 active:scale-95"
+          >
+            <span>Depositar com PIX</span>
           </a>
         </div>
+        
+        <p className="mt-6 text-sm text-muted-foreground">
+          Depósitos via PIX em segundos. Saques em cripto. Sem enrolação.
+        </p>
+
+        <div className="w-full max-w-3xl mt-8 text-center text-muted-foreground text-sm">
+          <p>
+            ⚙️ Transparência: estamos terminando a versão completa em português.
+            Todos os jogos e bônus já funcionam no Brasil.
+          </p>
+        </div>
+
       </section>
 
-      {/* ===== 3. Trust Row Section  ===== */}
-      <section className="w-full max-w-5xl mx-auto pb-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center px-4">
-          <div className="flex items-center justify-center space-x-3">
-            <Zap size={24} className="text-chart-3" />
-            <span className="text-lg">PIX instantâneo</span>
+      {/* ===== Trust Row Section ===== */}
+      <section className="w-full max-w-5xl mx-auto py-16 px-4">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-center items-start">
+          
+          <div className="flex flex-col items-center justify-center space-y-2">
+            <div className="h-6 w-6 flex items-center justify-center">
+              <Image
+                src="/img/flag_br.png"
+                alt="Bandeira do Brasil"
+                width={24}
+                height={17}
+                className="object-contain"
+              />
+            </div>
+            <span className="text-lg">PIX disponível</span>
           </div>
-          <div className="flex items-center justify-center space-x-3">
-            <ShieldCheck size={24} className="text-chart-3" />
-            <span className="text-lg">Cadastro rápido</span>
+          
+          <div className="flex flex-col items-center justify-center space-y-2">
+            <Wallet size={24} className="text-chart-3" />
+            <span className="text-lg">Pagamentos em cripto</span>
           </div>
-          <div className="flex items-center justify-center space-x-3">
+          
+          <div className="flex flex-col items-center justify-center space-y-2">
             <Clock size={24} className="text-chart-3" />
-            <span className="text-lg">Suporte 24/7</span>
+            <span className="text-lg">Pagamentos rápidos</span>
           </div>
+
+          <div className="flex flex-col items-center justify-center space-y-2">
+            <MessageCircle size={24} className="text-chart-3" />
+            <span className="text-lg">Atendimento em português</span>
+          </div>
+
+          <div className="flex flex-col items-center justify-center space-y-2">
+            <Lock size={24} className="text-chart-3" />
+            <span className="text-lg">Ambiente seguro</span>
+          </div>
+
         </div>
       </section>
 
-      {/* ===== 4. How it works Section ===== */}
-      <section className="w-full py-16 mt-8">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <div className="flex items-center justify-center space-x-3 mb-12">
+      {/* ===== Bonus Module ===== */}
+      <section className="w-full py-16">
+        <div className="max-w-3xl mx-auto px-4 text-center">
+          
+          {/* Título del modulo de Bono */}
+          <div className="flex items-center justify-center space-x-3 mb-8">
             <Image
               src="/img/logo_icon.png"
               alt="Ícone Gamblor"
@@ -99,53 +138,40 @@ hover:bg-brand/20 active:scale-95"
               height={32}
               className="object-contain"
             />
-            <h2 className="text-3xl font-bold">Como funciona</h2>
+            <h2 className="text-3xl font-bold">Bônus de 250% até R$ 25.000</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex flex-col items-center p-6 bg-card rounded-lg border border-border transition-all duration-300 hover:border-chart-3 hover:shadow-[inset_0_0_15px_0_var(--color-chart-3)]">
-              <div
-                className="flex items-center justify-center w-16 h-16 
-                bg-chart-3 text-primary-foreground 
-                text-2xl font-bold rounded-full mb-4"
+          <div className="inline-block text-left space-y-4 text-xl text-muted-foreground max-w-md">
+            
+            <div className="flex items-center gap-3">
+              <Star size={18} className="text-brand shrink-0" />
+              <span>Depósito mínimo R$ 20</span>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <Star size={18} className="text-brand shrink-0" />
+              <span>Rollover 40x no bônus</span>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <Star size={18} className="text-brand shrink-0" />
+              <a
+                href={termsLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-brand"
               >
-                1
-              </div>
-              <h3 className="text-xl font-semibold mb-2">
-                Escolha PIX no Depósito
-              </h3>
-              <p className="text-muted-foreground">
-                Selecione PIX como seu método de pagamento.
-              </p>
+                Termos completos aqui
+              </a>
             </div>
 
-            <div className="flex flex-col items-center p-6 bg-card rounded-lg border border-border transition-all duration-300 hover:border-chart-3 hover:shadow-[inset_0_0_15px_0_var(--color-chart-3)]">
-              <div className="flex items-center justify-center w-16 h-16 bg-chart-3 text-primary-foreground text-2xl font-bold rounded-full mb-4">
-                2
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Deposite R$20+</h3>
-              <p className="text-muted-foreground">
-                Confirmação instantânea em BRL a partir de R$20.
-              </p>
-            </div>
-
-            <div className="flex flex-col items-center p-6 bg-card rounded-lg border border-border transition-all duration-300 hover:border-chart-3 hover:shadow-[inset_0_0_15px_0_var(--color-chart-3)]">
-              <div className="flex items-center justify-center w-16 h-16 bg-chart-3 text-primary-foreground text-2xl font-bold rounded-full mb-4">
-                3
-              </div>
-              <h3 className="text-xl font-semibold mb-2">
-                Ative o bônus no depósito
-              </h3>
-              <p className="text-muted-foreground">
-                No primeiro depósito via PIX, selecione “Ativar bônus 250%” para
-                aplicar a oferta.
-              </p>
-            </div>
           </div>
+
         </div>
       </section>
 
-      {/* ===== 5. What to play Section ===== */}
+
+      {/* ===== What to play Section ===== */}
       <section className="w-full max-w-5xl mx-auto py-16 px-4 text-center">
         <div className="flex items-center justify-center space-x-3 mb-12">
           <Image
@@ -158,6 +184,7 @@ hover:bg-brand/20 active:scale-95"
           <h2 className="text-3xl font-bold">O que jogar</h2>
         </div>
 
+        {/* Grid de Juegos */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <a
             href={portalLink}
@@ -229,9 +256,44 @@ hover:bg-brand/20 active:scale-95"
             </div>
           </a>
         </div>
+
+        {/* --- CTA "Explorar jogos" --- */}
+        <div className="mt-12"> 
+          <a
+            href={portalLink} // Enlazado al portal principal
+            target="_blank"
+            rel="noopener noreferrer"
+            className="deposit-button transform transition-all duration-200 active:scale-95"
+          >
+            <span>Explorar jogos</span>
+          </a>
+        </div>
+
       </section>
 
-      {/* ===== 6. Why Gamblor Section  ===== */}
+      {/* ===== Prova Social ===== */}
+      <section className="w-full py-16">
+        <div className="max-w-3xl mx-auto px-4 flex flex-col items-center gap-8">
+          
+          {/* Tarjeta de Testimonio */}
+          <blockquote className="w-full p-6 bg-card rounded-lg border border-border text-center">
+            <p className="text-xl italic text-foreground">
+              “Depositei com PIX e o bônus caiu na hora. Suporte em português de verdade.”
+            </p>
+            <footer className="mt-4 text-brand">— João, São Paulo</footer>
+          </blockquote>
+          
+          {/* Badge de Soporte */}
+          <div className="flex items-center gap-3 text-lg text-muted-foreground">
+            <MessageCircle size={20} className="text-chart-3" />
+            <span>Atendimento em português 24 horas</span>
+          </div>
+
+        </div>
+      </section>
+
+
+      {/* ===== Why Gamblor Section  ===== */}
       <section className="w-full py-16">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <div className="flex items-center justify-center space-x-3 mb-12">
@@ -299,10 +361,10 @@ hover:bg-brand/20 active:scale-95"
         </div>
       </section>
 
-      {/* ===== 7. FAQ Section ===== */}
+      {/* ===== FAQ Section ===== */}
       <section className="w-full py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          {/* Título con ícone */}
+          {/* Título com ícone */}
           <div className="flex items-center justify-center space-x-3 mb-12">
             <Image
               src="/img/logo_icon.png"
@@ -336,10 +398,28 @@ hover:bg-brand/20 active:scale-95"
         </div>
       </section>
 
-      {/* ===== 7. Footer Section ===== */}
+      
+      <section className="w-full py-12 px-4 text-center">
+        <div className="max-w-3xl mx-auto flex items-start justify-center gap-3">
+          <Image
+            src="/img/flag_br.png"
+            alt="Bandeira do Brasil"
+            width={30}
+            height={21}
+            className="object-contain shrink-0 mt-1" 
+          />
+          <p className="text-lg text-muted-foreground text-center">
+            O Gamblor já está ativo no Brasil. A versão completa em português
+            chega em breve. Jogue agora com PIX e suporte em português.
+          </p>
+        </div>
+      </section>
+
+
+      {/* ===== footer Section ===== */}
       <footer className="w-full mt-16 border-t border-border">
         <div className="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between">
-          <div className="flex-shrink-0">
+          <div className="shrink-0">
             <a
               href="https://www.gamblor.io/invite?r=Gamblor_BR"
               target="_blank"
