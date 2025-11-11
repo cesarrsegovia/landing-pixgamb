@@ -9,6 +9,20 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
+      <section className="w-full bg-brand py-2 text-center text-sm font-medium text-primary-foreground flex items-center justify-center gap-2">
+        {/* CAMBIO: Reemplazado emoji por <Image> */}
+        <Image
+          src="/img/flag_br.png" // Asegúrate de que este sea el nombre de tu imagen
+          alt="Bandeira do Brasil"
+          width={20} // Ancho de 20px
+          height={14} // Alto de 14px
+          className="object-contain"
+        />
+        <span>
+          Feito pro Brasil. Estamos finalizando a versão completa em português, mas
+          você já pode jogar hoje.
+        </span>
+      </section>
       {/* ===== 1. Hero Section ===== */}
       <section
         className="w-full text-center flex flex-col items-center justify-center px-4 bg-no-repeat bg-center relative cursor-pointer bg-hero-sm md:bg-hero-md lg:bg-hero-lg xl:bg-hero-xl bg-cover aspect-[639/498] md:aspect-[872/450] lg:aspect-[1320/429] xl:aspect-[1966/554]"
